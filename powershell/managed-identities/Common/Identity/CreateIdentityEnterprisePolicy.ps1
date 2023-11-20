@@ -30,15 +30,15 @@ function CreateIdentityEnterprisePolicy
 
     )
 
-    Write-Host "Logging In..." -ForegroundColor Green
-    $connect = AzureLogin
-    if ($false -eq $connect)
-    {
-        Write-Host "Error Logging In..." -ForegroundColor Red
-        return
-    }
+    # Write-Host "Logging In..." -ForegroundColor Green
+    # $connect = AzureLogin
+    # if ($false -eq $connect)
+    # {
+    #     Write-Host "Error Logging In..." -ForegroundColor Red
+    #     return
+    # }
 
-    Write-Host "Logged In..." -ForegroundColor Green
+    # Write-Host "Logged In..." -ForegroundColor Green
     Write-Host "Creating Enterprise policy..." -ForegroundColor Green
 
     $body = GenerateEnterprisePolicyBody -policyType "identity" -policyLocation $enterprisePolicyLocation -policyName $enterprisePolicyName

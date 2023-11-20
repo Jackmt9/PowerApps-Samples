@@ -3,17 +3,21 @@
 
 function SetupSubscriptionForPowerPlatform
 {
-    param(
-        [Parameter(Mandatory=$true)]
-        [ValidateNotNullOrEmpty()]
-        [String]$subscriptionId
+    # param(
+    #     [Parameter(Mandatory=$true)]
+    #     [ValidateNotNullOrEmpty()]
+    #     [String]$subscriptionId,
 
-    )
+    #     [Parameter(Mandatory=$true)]
+    #     [ValidateNotNullOrEmpty()]
+    #     [String]$tenantId
+
+    # )
     
-    Write-Host "Logging In..." -ForegroundColor Green
-    $connect = AzureLogin
-    Write-Host "Logged In" -ForegroundColor Green
-    Set-AzContext -Subscription $subscriptionId
+    # Write-Host "Logging In..." -ForegroundColor Green
+    # $connect = AzureLogin $tenantId
+    # Write-Host "Logged In" -ForegroundColor Green
+    # Set-AzContext -Subscription $subscriptionId
 
     # Register the subscription
     Write-Host "Registering the subscription for Microsoft.PowerPlatform"

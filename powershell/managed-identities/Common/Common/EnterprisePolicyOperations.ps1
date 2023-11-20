@@ -1,6 +1,6 @@
-﻿function AzureLogin() {
+﻿function AzureLogin($tenantId) {
 
-    $connect = Connect-AzAccount
+    $connect = Connect-AzAccount -TenantId $tenantId
 
     if ($null -eq $connect)
     {
